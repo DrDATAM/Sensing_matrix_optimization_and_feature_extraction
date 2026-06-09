@@ -1,0 +1,369 @@
+\documentclass[PhD]{iitmdiss}
+%\documentclass[MS]{iitmdiss}
+%\documentclass[MTech]{iitmdiss}
+%\documentclass[BTech]{iitmdiss}
+\usepackage{times}
+\usepackage{datetime}
+ \usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage[toc,page]{appendix}
+%\usepackage[hypertex]{hyperref} % hyperlinks for references.
+%\usepackage{geometry}breaklinks=true
+%\usepackage{amsmath} % easier math formulae, align, subequations \ldots
+%\usepackage{graphicx}
+%\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amsmath, amssymb}
+%\usepackage {amssymb,amsmath}
+%\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+%\usepackage{natbib}
+\usepackage{algorithmic}
+\DeclareMathOperator*{\Max}{Max}
+\usepackage{mathtools}
+\usepackage{bigints}
+\usepackage{relsize}
+\usepackage{bm}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+\usepackage{eqparbox}
+\usepackage{amsthm}
+\def\db#1{\mbox{\bf{#1}}}
+\usepackage[ruled,vlined,linesnumbered,noresetcount]{algorithm2e}
+\usepackage{bm}
+
+\newtheorem{corollary}{Corollary}
+\newtheorem{prop}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{proof}{Proof}
+
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\ul}{\underline}
+\newcommand{\IN}{\indent}
+\newcommand{\NI}{\noindent}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bd}{\begin{description}}
+\newcommand{\ed}{\end{description}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\bt}{\begin{tabbing}}
+\newcommand{\et}{\end{tabbing}}
+\newcommand{\bfig}{\begin{figure}}
+\newcommand{\efig}{\end{figure}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\beqarr}{\begin{eqnarray}}
+\newcommand{\beqarrn}{\begin{eqnarray*}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\eeqarr}{\end{eqnarray}}
+\newcommand{\eeqarrn}{\end{eqnarray*}}
+\newcommand{\bflr}{\begin{flushright}\vspace{-0.2in}}
+\newcommand{\eflr}{\end{flushright}}
+\newcommand{\bsub}{\begin{subequations}}
+\newcommand{\esub}{\end{subequations}}
+\newcommand{\barr}{\begin{array}}
+\newcommand{\earr}{\end{array}}
+\newcommand{\nn}{\nonumber}
+\def\binom#1#2{\left( \! \! \barr{c} #1 \\ #2 \earr \! \! \right)}
+\def\und#1{\underline{#1}}
+\def\undb#1{\mbox{\bf{#1}}}
+\def\undm#1{\mbox{\boldmath{$#1$}}}
+\def\undms#1{\mbox{\small \boldmath{$#1$}}}
+\def\unss#1{\mbox{\small {$#1$}}}
+\def\unts#1{\text{\tiny{$\text{#1}$}}}
+%\def\undmss#1{\mbox{\footnotesize \boldmath{$#1$}}}
+%\def\undm#1{\mathbf{#1}} does not work with latex2.09
+\def\unds#1{\mbox{\footnotesize{\bf{#1}}}}
+\def\undsm#1{\mbox{\small{\bf{#1}}}}
+\def\xv#1{\und{x}_{#1}}
+\def\xlv#1{\und{X}_{#1}}
+\def\yv#1{\und{y}_{#1}}
+\def\ylv#1{\und{Y}_{#1}}
+\def\scr#1{\scriptscriptstyle {#1}}
+\def\ov#1{\overline{#1}}
+\def\ft{\footnotesize}
+\def\dsp{\displaystyle}
+\def\txtt{\textstyle}
+\def\scrr{\scriptstyle}
+\def\scrscr{\scriptscriptstyle}
+\def\dn{\stackrel{\scriptscriptstyle \triangle}{=}}
+%\def\dn{\triangleq}
+\def\vep{\varepsilon}
+\def\ep{\epsilon}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, fit}
+
+%\usepackage{fullpage}
+%\usepackage[format=hang]{subfig}
+%\captionsetup[subfloat]{farskip=7pt,nearskip=3pt}
+%%\usepackage{subfigure}
+%\usepackage{caption}
+%
+%\bibliographystyle{IEEEtran}
+%
+%
+%\setlength{\topmargin}{0.0cm}
+%\setlength{\textheight}{21.5cm}
+%\setlength{\oddsidemargin}{0cm}
+%\setlength{\textwidth}{16.5cm}
+%\setlength{\columnsep}{0.6cm}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+
+\title{SENSING MATRIX OPTIMIZATION AND FEATURE EXTRACTION FOR IMAGE PROCESSING}
+
+\author{Meenakshi}
+
+\date{OCTOBER 2022}
+\department{ELECTRICAL ENGINEERING}
+
+%\nocite{*}
+\maketitlefirst
+
+\newpage
+\hspace{0pt}
+\vfill
+\begin{center}
+ $\copyright$ Indian Institute of Technology Delhi (IITD), New Delhi, 2022      
+\end{center}
+\vfill
+\hspace{0pt}
+
+%\nocite{*}
+\maketitlesecond
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Certificate
+\certificate
+
+\vspace*{0.5in}
+
+\noindent This is to certify that the thesis titled {\bf Sensing matrix optimization and feature extraction for image processing}, submitted by {\bf Meenakshi}, to the Indian Institute of Technology Delhi, for the award of the degree of {\bf Doctor of Philosophy}, is a bonafide record of the research work done by her under my supervision.  \par
+The contents of this thesis, in full or in parts, have not been submitted to any other Institute or University for the award of any degree or diploma.
+
+\vspace*{1.5in}
+
+\begin{singlespacing}
+\hspace*{-0.25in}
+\parbox{2.5in}{
+\noindent {\bf Prof.~Seshan Srirangarajan} \\
+%\noindent Research Guide \\
+\noindent Thesis Supervisor \\
+\noindent Department of Electrical Engineering \\
+\noindent Indian Institute of Technology, Delhi \\
+\noindent Hauz Khas New Delhi 110016\\
+}
+\hspace*{1.9in} % 1.0
+%\parbox{2.5in}{
+%\noindent {\bf Prof.~S.~C.~Rajan} \\
+%\noindent Research Guide \\
+%\noindent Assistant Professor \\
+%\noindent Dept.  of  Aerospace Engineering\\
+%\noindent IIT-Madras, 600 036 \\
+%}
+\end{singlespacing}
+\vspace*{0.35in}
+\noindent Place: New Delhi\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgements
+\acknowledgements
+This thesis has been made possible owing to the generous help of many people and I am delighted to acknowledge them here. I would like to thank Prof. Seshan Srirangarajan for accepting me into his group. I can never thank him enough for his guidance, encouragement and patience that I received during my graduate program.  \\
+I would further like to express my deepest appreciation to my family and friends for their endless support and for understanding me in the low moments. I have immense gratitude for my parents, I would not be where I am today without their help and support. I am deeply indebted to them for their unconditional love and support through this long arduous journey. To my wonderful husband, Vinay, thank you for your support, appreciation and for your unshaken belief in me. \\
+Finally, I would like to send my heartfelt thanks to Prof. Shankar Prakriya, Prof. Monika Agarwal, and Prof. Brejesh Lall for accepting to be my student research committee members and for their valuable feedback during my end semester presentations.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+
+\abstract
+
+%\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{\LaTeX ; Thesis;
+%  Style files; Format.}
+
+\vspace*{24pt}
+
+At the heart of many pattern recognition and computer vision applications is the question of how to represent and recover data. Representing data in a manner which highlights its key properties can significantly affect the performance of pattern recognition and computer vision applications. Many approaches have been proposed for representing and recovering the high-dimensional data which tend to reside in low-dimensional intrinsic subspaces. Recently, there has been much research in optimally selecting informative samples from high-dimensional data via sensing matrix using compressed sensing. Compressed sensing allows us to exploit the sparse structure of the underlying phenomena for capturing incoherent measurements using a sensing matrix and then recovering the high-dimensional data. However, the sparse signal structure is not the only key aspect of compressed sensing; a robust incoherent frame structure to be used for the measurements is equally important. 
+
+In this thesis, we address the problem of reconstructing high-dimensional data (such as images) in the presence of noise using measurements via incoherent sensing matrix for data compression. We propose an incoherent and robust sensing matrix design based on an equiangular tight frame to ensure reduced pairwise correlation among the frame vectors and tightness of the frame. Experiments are performed on synthetic data as well as real images. The performance evaluation is carried out in terms of mutual coherence, signal reconstruction accuracy, and peak signal-to-noise ratio. In addition, it is observed that the high dimensional data samples widely used in computer vision and pattern recognition tasks may contain irrelevant and redundant features. This can result in increased computational complexity, memory requirements, as well as the possibility of overfitting which can greatly weaken the inherent structural relationship between features degrading the overall performance. Thus, finding compact low-dimensional representation and features with good generalization and discriminative abilities is very important. 
+
+In this thesis we address these issues to develop feature extraction models for image classification. Firstly, we present a representation-based supervised feature extraction model exploring the underlying global and local structure of the high-dimensional data. Next, we propose a regression-based feature extraction model to address the problem of insufficient inter-class margin and loss of the manifold structure of the data. To ensure the relative significance of the extracted features, an $\ell_{2,1}$-norm based regularization is employed. Performance of the proposed models is evaluated on various data sets for face, scene, and object recognition. The results achieved are compared with state-of-the-art methods to validate the effectiveness of the proposed models.
+%
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table of contents etc.
+
+\begin{singlespace}
+\tableofcontents
+\thispagestyle{empty}
+
+\listoftables
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
+\listoffigures
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\end{singlespace}
+
+
+%--------------------------------------------------------------%
+% Abbreviations
+\abbreviations
+
+\noindent
+\begin{tabbing}
+xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
+%\textbf{IITD}   \> Indian Institute of Technology, Delhi \\
+\textbf{CS} \> Compressed Sensing \\
+\textbf{SEE} \> Sparse Encoding Error\\
+\textbf{OMP} \> Orthogonal Matching Pursuit \\
+\textbf{MP} \> Matching Pursuit \\
+\textbf{WB} \> Welch Bound\\
+\textbf{RIP} \> Restricted Isometry Property\\
+\textbf{RIC} \> Restricted Isometry Constant\\
+\textbf{ETF} \> Equiangular Tight Frame\\
+\textbf{UNTF} \> Unit Norm Tight Frame\\
+\textbf{PCA} \> Principal Component Analysis\\
+\textbf{LDA} \> Linear Discriminant Analysis \\
+\textbf{NPE} \> Neighbour Preserving Embedding \\
+\textbf{LPP} \> Locality Preserving Projection \\
+\textbf{SSS} \> Small Sample Size\\
+\textbf{OLDA} \>  Orthogonal Linear Discriminant Analysis \\
+\textbf{MPDA} \>  Manifold Partition Discriminant Analysis \\
+\textbf{SRC} \> Sparse Representation-based Classification \\
+\textbf{CRC} \> Collaborative Representation-based Classification \\
+\textbf{LLC} \> Locality-constrained Linear Coding \\ 
+\textbf{LRR} \> Low-rank Representation \\
+\textbf{LatLRR} \> Latent Low-rank Representation \\ 
+\textbf{LRE} \> Low-rank Embedding \\
+\textbf{RsLDA} \> Robust Sparse Linear Discriminant Analysis \\
+\textbf{SALPL} \> supervised approximate low-rank projection learning \\
+\textbf{LLRSE} \> Latent Low-rank and Sparse Embedding \\
+\textbf{CDPL} \> Constrained Discriminative Projection Learning \\
+\textbf{LR} \> Linear Regression\\
+\textbf{LSR} \> Least square regression \\
+\textbf{DLSR} \> Discriminative Least Squares Regression \\
+\textbf{ReLSR} \> Retargeted Least Squares Regression\\
+\textbf{GReLSR} \> Groupwise Retargeted Least Squares Regression\\ 
+\textbf{RLSL} \> Robust Latent Subspace Learning \\ 
+\textbf{HOG} \> Histogram of Oriented Gradients \\
+\textbf{LBP} \> Local Binary pattern \\
+\textbf{ISMD} \> Incoherent Sensing Matrix Design  \\
+\textbf{UNF} \> Unit Norm Frame \\
+\textbf{IFD} \> Incoherent Frame Design \\
+\textbf{IR-PMD} \> Incoherent and Robust Projection Matrix Design \\
+\textbf{SVD} \> Singular Value Decomposition \\
+\textbf{SNR} \> Signal-to-noise Ratio \\
+\textbf{NMSE} \> Normalized Mean Square Error \\
+\textbf{MSE} \> Mean Square Error \\
+\textbf{PSNR} \> Peak Signal-to-noise Ratio \\
+\textbf{LADSL} \> Locality-aware Discriminative Subspace Learning \\
+\textbf{ADMM} \> Alternating Direction Method of Multipliers\\
+\textbf{K-NN} \> K-Nearest Neighbour \\
+\textbf{SVM} \> Support Vector Machine \\
+\textbf{LRSI} \> Low-rank Model with Structure Incoherence \\
+\textbf{LRRR} \> Low-rank Ridge Regression\\
+\textbf{SLRR} \> Sparse low-rank Regression\\
+\textbf{LRSI} \>  Low-rank Linear Regression \\
+\textbf{LR-DRR} \> Low rank Based Double Relaxed Regression \\
+\textbf{TRLSR} \> Twin Relaxed Least Squares Regression \\
+\textbf{RLSR} \> Relaxed Least Squares Regression \\
+\end{tabbing}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notation
+
+\chapter*{\centerline{NOTATION}}
+\addcontentsline{toc}{chapter}{NOTATION}
+
+\begin{singlespace}
+\begin{tabbing}
+xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
+$x$ \> scalar \\
+\textbf{$\bm{x}$} \> vector \\
+\textbf{$\bm{A}$} \> Matrix \\
+\textbf{$\bm{A}^{T}$} \> Matrix Transpose \\
+\textbf{$\bm{A}^{-1}$} \>  Matrix Inverse \\
+\textbf{tr($A$)} \> trace of matrix $\bm{A}$ \\
+\textbf{$\bm{A}^{*}$} \> Conjugate transpose of $\bm{A}$ \\
+\textbf{$\bm{a}_{i}$ ($\bm{a}^{i}$)} \> $i^{\text{th}}$ column (row) of matrix $\bm{A}$\\
+\textbf{$\bm{A}_{i,j}$} \> Element at the intersection of $i^{\text{th}}$ row and $j^{\text{th}}$ column of matrix $\bm{A}$\\
+\textbf{$A \odot B$} \> Hadamard product of two matrices $\bm{A}$ and $\bm{B}$ \\
+\textbf{$\|\bm{A}\|_{F}$} \> $\sqrt{\sum_{j}\|\bm{a}_{j}\|_{2}^{2}}$ (Frobenius norm)\\
+\textbf{$\|\bm{A}\|_{2,1}$} \> $\sum_{i} \sqrt{\sum_{j} |\bm{A}_{i,j}|^{2}}$ ($\ell_{2,1}$-norm) \\
+\textbf{$\left[N\right]$} \> set $\{1, 2,\dots,N\}$ \\
+\textbf{$\text{card}(\bm{\mathcal{P}})$} \> Cardinality of the set $\bm{\mathcal{P}}$ \\
+\textbf{$\bm{A}_{\bm{\mathcal{P}}}$} \> Sub-matrix of $\bm{A}$ containing the columns indexed by $\bm{\mathcal{P}}$. \\
+\textbf{$\text{supp}(\bm{x})$} \> Support of $\bm{x} \in \Re^{N}$, i.e. $\text{supp}(\bm{x})=\{ j \in \left[N\right]:x_{j} \neq 0\}$ \\
+\> the index set of its non-zero elements. \\
+\textbf{$\text{diag}[\bm{x}]$} \> Diagonal matrix with the vector $\bm{x}$ as its diagonal elements
+\end{tabbing}
+\end{singlespace}
+
+\pagebreak
+\clearpage
+
+% The main text will follow from this point so set the page numbering
+% to arabic from here on.
+\pagenumbering{arabic}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Introduction.
+\input{Introduction}
+\input{Literature Survey}
+\input{Chapter3}
+\input{Chapter4}
+\input{Chapter5}
+\input{Chapter6}
+\input{Conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+%\appendices
+%\vspace{-20pt}
+
+%\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography.
+\newpage
+\references
+\bibliographystyle{ieeetr}
+\bibliography{PhD_ref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List of papers
+%
+\listofpapers
+\begin{enumerate}
+%
+\item \textbf{Meenakshi}, and S. Srirangarajan, ``Locality-aware Discriminative Subspace Learning for Image Classification'', IEEE Transactions on Instrumentation and Measurement, Vol.~71, Art. No. 5015414, pp. 1-14, 2022.
+%
+\item \textbf{Meenakshi}, and S. Srirangarajan, ``Twin Relaxed Least Squares Regression with Classwise Mean Constraint for Image Classification'', Image and Vision Computing, Vol. 124, Art. No. 104506, pp. 1-10, Aug. 2022.
+%
+\item \textbf{Meenakshi} and S. Srirangarajan, ``Incoherent and Robust Projection Matrix Design Based on Equiangular Tight Frame'', IEEE Access, vol. 9, pp. 131462-131475, 2021.
+%
+\item \textbf{Meenakshi} and S. Srirangarajan, ``Low-Rank Double Relaxed Regression for Discriminative Projection Learning'', 23rd IEEE International Workshop on Multimedia Signal Processing (MMSP), Tampere, Finland, Oct. 2021.
+%
+\item \textbf{Meenakshi} and S. Srirangarajan, ``Incoherent projection matrix design for compressed sensing using Alternating Optimization'', 26th European Signal Processing Conference (EUSIPCO), Rome, Sep. 2018.
+%
+\end{enumerate}
+
+\newpage
+\biodata
+\centerline{\textbf{CURRICULUM VITAE}} 
+Meenakshi received the B.Tech. degree in electronics and communication engineering from Kurukshetra University, Haryana, India and the M.Tech. degree in electronics and communication engineering from the Panjab University, Chandigarh, India, in 2012 and 2015, respectively. She has completed her Ph.D. degree from the Electrical Engineering Department of Indian Institute of Technology Delhi, New Delhi, India in 2022. She is working in the area of compressed sensing, feature extraction, dimension reduction and advanced algorithms in deep learning for computer vision and pattern recognition applications. Her research interests include broad areas of signal/image processing focusing on compressed sensing, sparse/low-rank representation, feature extraction, dimensionality reduction, deep learning models, transfer learning, image recognition, and classification.
+\end{document}

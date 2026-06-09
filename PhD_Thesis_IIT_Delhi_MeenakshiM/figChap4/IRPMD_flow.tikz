@@ -1,0 +1,59 @@
+    \begin{tikzpicture}
+
+%\draw [ thick]  (-4,0.5) rectangle (4,-8);
+
+%\tikzstyle{every node}=[font=\small]
+\tikzstyle{every node}=[font=\scriptsize]
+
+\tikzstyle{startstop} = [rectangle, rounded corners, text centered, draw=black, fill=red!20]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110,text width=5.2cm, text centered, draw=black, fill=blue!20]
+\tikzstyle{process} = [rectangle, text centered, draw=black, fill=orange!20]
+\tikzstyle{decision} = [diamond, text centered, draw=black, fill=green!20]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\node (start) [startstop] {\textbf{Given}: \begin{tabular}{l} Training data matrix $\bm{X}$;\\ Sparsifying basis $\bm{\Psi}$; \\ Maximum number of iterations $N_{SE}$; 
+\end{tabular}};
+\node (in1) [io, below of=start,node distance=1.4cm] {\textbf{Initialize}: $t=1$, Sensing matrix $\bm{\Phi}_{0}$ randomly, $\bm{W}_{0}=\bm{I}_{m\times m}$, parameter $\gamma$};
+
+\node (pro1) [process, below of=in1,node distance=1.2cm] {  \textbf{Compute:} \begin{tabular}{l} Frame $\bm{D}_{t-1}$ and corresponding Gram matrix $\bm{G}_{t-1}$\end{tabular}};
+
+\node (pro2b) [process, below of=pro1, node distance=1.2cm] { % xshift=2.5cm
+\begin{tabular}{l} Update the weight matrix $\bm{W}_{t}$ \\
+Update the sensing matrix $\bm{\Phi}_{t}$\end{tabular}};
+
+\node (dec1) [decision, below of=pro2b, node distance=1.5cm,xshift=-3.5cm] {$t\leq N_{SE}$};
+
+\node (out1) [io, below of=dec1,node distance=1.5cm, xshift=3.2cm] { \textbf{Output}: \begin{tabular}{l}  Frame matrix $\bm{D}_{\text{ETF}}=\bm{D}_{t-1}$\\ Sensing matrix $\bm{\Phi}=\bm{\Phi}_{t-1}$ \end{tabular}};
+
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (pro1);
+\draw [arrow] (pro1)  --  (pro2b);
+
+\draw [arrow]  (pro2b) -| (dec1);
+\draw [arrow] (dec1) -|  (pro2b);
+%\draw[arrow](dec1) -| (pro2b)
+%\draw [arrow] (dec1) -|  (out1);
+
+\node (v1) at (-3.5,-6.07) {};
+\node (v2) at (-3.08,-6.9) {};
+\draw [arrow] (v1) |- (v2);
+%\draw  [thick] (v1) edge (v2);
+\node (v3) at (-2.9, -6.9){};
+\node (v4) at (-3.5, -6.0){};
+%\draw [arrow] (v4) |- (v3);
+%\node (v2) at (-2.4,-3.61) {};
+%\node (v1) at (-2.4,-2.86) {};
+%\draw  [arrow] (v1) -- (v2);
+%\node (v3) at (-3.38,-6.99) {};
+%\node (v4) at (-3.38,-3.4) {};
+%\draw  [arrow] (v3) -- (v4);
+%\node (v6) at (-3.52,-4.1) {};
+%\node (v5) at (-2.88,-4.1) {};
+%\draw  [thick] (v5) edge (v6);
+%\draw  [arrow] (-2.4,-4.7) -- (-2.4,-5.1) -- (1.13,-5.1) -- (1.13,-4.78);
+\node at (-3.94,-6.50) {False};
+\node at (-2.44,-4.93) {True};
+\node at (-2.90,-4.0) {$t = t + 1$};
+%\node at (-2.13,-3.2) {i=1};
+%\node at (-1.6,-3.9) {i=i+1};
+\end{tikzpicture}
