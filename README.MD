@@ -43,7 +43,7 @@ ISMD Framework: Algorithms for Incoherent Sensing Matrix Design via alternating 
 
 ## Citation
 
-If you find the frameworks, text, or methodologies useful in your academic research, please cite the dissertation using the following entry[cite: 1]:
+If you find the frameworks, text, or methodologies useful in your academic research in any form, please cite the dissertation using the following entry[cite: 1]:
 
 ```bibtex
 @phdthesis{meenakshi2022sensing,
